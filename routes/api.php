@@ -21,3 +21,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::post('/login', 'LoginController@userLogin');
 
 Route::post('register', 'LoginController@userRegister');
+
+Route::group(['prefix' => 'parameter', 'as' => 'parameter'], function () {
+    Route::post('select-phone', 'SelectParameterController@selectPhone');
+});
+
+Route::post('/transaction', 'TransactionController@phoneTransaction');

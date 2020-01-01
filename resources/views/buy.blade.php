@@ -39,7 +39,7 @@
             </div>
             <div class="col-md-12">
                 <div class="col-md-12">
-                    <div class="col-md-12">
+                    <div class="col-md-12 mt-3">
                         <span class="font-weight-bold">Select Brand</span>
                     </div>
                     <?php
@@ -49,18 +49,69 @@
                     ?>
 
                     <div class="col-md-12">
-                        <select name="brand-selector" id="brand-selector">
+                        <select onchange="changeBrand()" name="brand-selector" id="brand-selector">
                             <option value="{{ NULL }}">Select Brand</option>
                             @foreach($brands as $brand)
-                                <option value="{{ $brand->brand_id }}">{{ $brand->brand_name }}</option>
+                                <option value="{{ json_encode($brand) }}">{{ $brand->brand_name }}</option>
                             @endforeach
                         </select>
                     </div>
 
+                    <div class="col-md-12 mt-3">
+                        <span class="font-weight-bold">Select Phone</span>
+                    </div>
+
                     <?php
-
-
+                    $phones = \Illuminate\Support\Facades\DB::table('ms_phone')
+                        ->select([
+                            'ms_phone.phone_id',
+                            'ms_phone.type as phone_name',
+                            'b.phone_detail_id',
+                            'b.color',
+                            'b.memory',
+                            'b.storage',
+                            'b.price',
+                            'a.brand_id',
+                            'a.brand_name'
+                        ])
+                        ->join('ms_brand as a', function (\Illuminate\Database\Query\JoinClause $clause) {
+                            $clause->on('a.brand_id', '=', 'ms_phone.brand_id');
+                            $clause->whereNull('a.deleted_at');
+                        })
+                        ->join('ms_phone_detail as b', function (\Illuminate\Database\Query\JoinClause $clause) {
+                            $clause->on('b.phone_id', '=', 'ms_phone.phone_id');
+                            $clause->whereNull('b.deleted_at');
+                            $clause->where('b.stock', '>', 0);
+                        })
+                        ->whereNull('ms_phone.deleted_at')
+                        ->get()
+                        ->toArray();
                     ?>
+
+                    <div class="col-md-12">
+                        <select onchange="changePhone()" name="phone-selector" id="phone-selector">
+                            <option value="{{ NULL }}">Select Phone</option>
+                            @foreach($phones as $phone)
+                                <option value="{{ json_encode($phone) }}">{{ $phone->phone_name }} {{$phone->color}} {{$phone->memory}}
+                                    GB/{{$phone->storage}}GB
+                                </option>
+                            @endforeach
+                        </select>
+                    </div>
+
+
+                    <div class="col-md-12 mt-3">
+                        <span class="font-weight-bold">Quantity</span>
+                    </div>
+
+                    <div class="col-md-12">
+                        <input id="quantity" onchange="changeQuantity()" type="number" placeholder="Input Quantity">
+                    </div>
+
+                    <div class="col-md-12 mt-4">
+                        <button type="submit" onclick="onSubmit()" class="btn btn-primary">Submit</button>
+                    </div>
+
                 </div>
             </div>
         </div>

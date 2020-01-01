@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * Class MsStaff
- * @property string staff_id
+ * @property integer staff_id
  * @property string staff_name
  * @property string staff_phone
  * @property integer staff_salary
