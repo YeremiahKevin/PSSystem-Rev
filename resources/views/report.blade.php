@@ -1,6 +1,6 @@
 <html lang="en-us">
 <head>
-    <title>Login</title>
+    <title>Buy</title>
 
     {{-- Font Awesome --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
@@ -10,10 +10,10 @@
     <link href="{{ asset('css/all.css') }}" rel="stylesheet">
 
     {{--CSS Login--}}
-    <link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/report.css') }}" rel="stylesheet">
 
     {{--Javascript login--}}
-    <script type="text/javascript" src="{{ asset('js/dashboard.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/report.js') }}"></script>
 
     {{--token login--}}
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -38,19 +38,22 @@
                 <span class="font-weight-bold font-50">PS System</span>
             </div>
             <div class="col-md-12">
-                <div class="row">
-                    <div class="col-md-6">
-                        <i class="fas fa-cart-arrow-down fa-10x cursor-pointer" onclick="onClickBuy()"></i>
-                        <div class="col-md-12">
-                            <span class="font-weight-bold" style="font-size: x-large">Beli</span>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <i class="fas fa-book fa-10x" onclick="onClickReport()"></i>
-                        <div class="col-md-12">
-                            <span class="font-weight-bold" style="font-size: x-large">Laporan Penjualan</span>
-                        </div>
-                    </div>
+                <div class="col-md-12 mt-4">
+                    <select onchange="changeMonth()" id="month-selector" name="month-selector">
+                        <option>Select Month</option>
+                        <option value="1">Januari</option>
+                        <option value="2">Februari</option>
+                        <option value="3">Maret</option>
+                        <option value="4">April</option>
+                        <option value="5">Mei</option>
+                        <option value="6">Juni</option>
+                        <option value="7">Juli</option>
+                        <option value="8">Agustus</option>
+                        <option value="9">September</option>
+                        <option value="10">Oktober</option>
+                        <option value="11">November</option>
+                        <option value="12">Desember</option>
+                    </select>
                 </div>
             </div>
         </div>

@@ -28,3 +28,7 @@ Route::get('/dashboard', function () {
 Route::get('buy', function () {
     return view('buy');
 });
+
+Route::get('report',function () {
+    return view('report');
+});
