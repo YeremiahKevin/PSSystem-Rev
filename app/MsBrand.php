@@ -9,6 +9,9 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * Class MsPhone
  * @property integer brand_id
  * @property string brand_name
+ *
+ * @method static MsBrand findOrFail($brand_id)
+ *
  * @package App
  */
 class MsBrand extends Model

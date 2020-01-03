@@ -37,21 +37,37 @@
             <div class="col-md-12 text-center bg-primary">
                 <span class="font-weight-bold font-50">PS System</span>
             </div>
-            <div class="col-md-12">
-                <div class="row">
-                    <div class="col-md-6">
-                        <i class="fas fa-cart-arrow-down fa-10x cursor-pointer" onclick="onClickBuy()"></i>
-                        <div class="col-md-12">
-                            <span class="font-weight-bold" style="font-size: x-large">Beli</span>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <i class="fas fa-book fa-10x" onclick="onClickReport()"></i>
-                        <div class="col-md-12">
-                            <span class="font-weight-bold" style="font-size: x-large">Laporan Penjualan</span>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-md-12 mt-5">
+                <table class="table table-bordered">
+                    <tr>
+                        <td class="text-center" width="50%">
+                            <i class="fas fa-cart-arrow-down fa-10x cursor-pointer" onclick="onClickBuy()"></i>
+                            <div class="col-md-12">
+                                <span class="font-weight-bold" style="font-size: x-large">Sales</span>
+                            </div>
+                        </td>
+                        <td class="text-center" width="50%">
+                            <i class="fas fa-book fa-10x cursor-pointer" onclick="onClickReport()"></i>
+                            <div class="col-md-12">
+                                <span class="font-weight-bold" style="font-size: x-large">Sales Report</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">
+                            <i class="fas fa-mobile-alt fa-10x cursor-pointer" onclick="onClickNewItem()"></i>
+                            <div class="col-md-12">
+                                <span class="font-weight-bold" style="font-size: x-large">New Phone</span>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <i class="fas fa-memory fa-10x cursor-pointer" onclick="onClickNewItemDetail()"></i>
+                            <div class="col-md-12">
+                                <span class="font-weight-bold" style="font-size: x-large">New Phone Detail</span>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>

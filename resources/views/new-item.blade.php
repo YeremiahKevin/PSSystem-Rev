@@ -10,10 +10,10 @@
     <link href="{{ asset('css/all.css') }}" rel="stylesheet">
 
     {{--CSS Login--}}
-    <link href="{{ asset('css/report.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/new-item.css') }}" rel="stylesheet">
 
     {{--Javascript login--}}
-    <script type="text/javascript" src="{{ asset('js/report.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/new-item.js') }}"></script>
 
     {{--token login--}}
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -38,22 +38,30 @@
                 <span class="font-weight-bold font-50">PS System</span>
             </div>
             <div class="col-md-12">
-                <div class="col-md-12 mt-4">
-                    <select onchange="changeMonth()" id="month-selector" name="month-selector">
-                        <option>Select Month</option>
-                        <option value="1">Januari</option>
-                        <option value="2">Februari</option>
-                        <option value="3">Maret</option>
-                        <option value="4">April</option>
-                        <option value="5">Mei</option>
-                        <option value="6">Juni</option>
-                        <option value="7">Juli</option>
-                        <option value="8">Agustus</option>
-                        <option value="9">September</option>
-                        <option value="10">Oktober</option>
-                        <option value="11">November</option>
-                        <option value="12">Desember</option>
+                <?php
+                $brands = \Illuminate\Support\Facades\DB::table('ms_brand')
+                    ->get()
+                    ->toArray();
+                ?>
+
+                <div class="col-md-12 mt-3">
+                    <select onchange="changeBrand()" name="brand-selector" id="brand-selector">
+                        <option value="{{ NULL }}">Select Brand</option>
+                        @foreach($brands as $brand)
+                            <option value="{{ json_encode($brand) }}">{{ $brand->brand_name }}</option>
+                        @endforeach
                     </select>
+                </div>
+
+                <div class="col-md-12 mt-3">
+                    <span class="font-weight-bold">Type</span>
+                </div>
+                <div class="col-md-12">
+                    <input type="text" id="type" placeholder="input phone type">
+                </div>
+
+                <div class="col-md-12 mt-3">
+                    <button class="btn btn-primary" onclick="onClickSubmit()">Submit</button>
                 </div>
             </div>
         </div>

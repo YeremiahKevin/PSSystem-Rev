@@ -50,7 +50,7 @@ class SelectParameterController extends BaseController
             throw  $exception;
         }
 
-        return view('select-phone', $phones);
+        return response($phones);
     }
 
 

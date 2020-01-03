@@ -34,7 +34,7 @@
 <div class="container h-100">
     <div class="row h-100 justify-content-center">
         <div class="col p-0" style="background-color: white">
-            <div class="col-md-12 text-center bg-primary">
+            <div class="col-md-12 text-center bg-primary cursor-pointer" onclick="onClickLogo()">
                 <span class="font-weight-bold font-50">PS System</span>
             </div>
             <div class="col-md-12">

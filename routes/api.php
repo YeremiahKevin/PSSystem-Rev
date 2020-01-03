@@ -29,3 +29,7 @@ Route::group(['prefix' => 'parameter', 'as' => 'parameter'], function () {
 Route::post('/transaction', 'TransactionController@phoneTransaction');
 
 Route::get('/report/{month_number}', 'ReportController@getReportMonthly');
+
+Route::post('/new-item', 'PhoneController@addPhone');
+
+Route::post('/new-item-detail', 'PhoneController@addPhoneDetail');

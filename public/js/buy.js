@@ -5,16 +5,14 @@ let data = {
     'quantity': null
 };
 
+function onClickLogo() {
+    window.location.href = '/dashboard';
+}
 
 function changeBrand() {
     const selectedBrand = JSON.parse(document.getElementById('brand-selector').value);
     data.brand_id = selectedBrand.brand_id;
-    // let phones = [];
-    //
-    // const data = {
-    //     brand_id: $('select[name=brand-selector]').val()
-    // };
-    //
+
     // $.ajaxSetup({
     //     headers: {
     //         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -26,11 +24,16 @@ function changeBrand() {
     //     type: 'POST',
     //     data: data
     // }).done(function (response) {
-    //     phones = response
+    //     // View phone selector by selected brand
+    //     let phones = '';
+    //     response.forEach(phone => {
+    //         phones += '<option value="phone">' + phone.phone_name + '</option>'
+    //     });
+    //     $('#phone-selector').html(phones);
+    //     console.log(response);
     // }).fail(function (response) {
     //     alert(response.statusText);
     // });
-
 }
 
 function changePhone() {
