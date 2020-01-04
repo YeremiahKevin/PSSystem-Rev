@@ -81,6 +81,14 @@
                             </div>
                         </td>
                     </tr>
+                    <tr>
+                        <td class="text-center">
+                            <i class="fas fa-eye fa-10x cursor-pointer" onclick="onClickViewAllPhones()"></i>
+                            <div class="col-md-12">
+                                <span class="font-weight-bold" style="font-size: x-large">View All Phones</span>
+                            </div>
+                        </td>
+                    </tr>
                 </table>
             </div>
         </div>

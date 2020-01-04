@@ -22,3 +22,7 @@ function onClickAddPhoneStock() {
 function onClickUpdatePrice() {
     window.location.href = '/update-phone-price';
 }
+
+function onClickViewAllPhones() {
+    window.location.href = '/view-all-phones';
+}

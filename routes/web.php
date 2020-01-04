@@ -48,3 +48,7 @@ Route::get('add-phone-stock', function () {
 Route::get('update-phone-price', function () {
     return view('update-phone-price');
 });
+
+Route::get('view-all-phones', function () {
+    return view('view-all-phones');
+});
