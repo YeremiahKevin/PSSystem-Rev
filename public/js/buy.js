@@ -27,7 +27,7 @@ function changeBrand() {
     //     // View phone selector by selected brand
     //     let phones = '';
     //     response.forEach(phone => {
-    //         phones += '<option value="phone">' + phone.phone_name + '</option>'
+    //         phones += '<option>' + phone.phone_name + ' ' + phone.color + ' ' + phone.memory + '/' + phone.storage + 'GB' + '</option>';
     //     });
     //     $('#phone-selector').html(phones);
     //     console.log(response);

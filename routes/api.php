@@ -33,3 +33,7 @@ Route::get('/report/{month_number}', 'ReportController@getReportMonthly');
 Route::post('/new-item', 'PhoneController@addPhone');
 
 Route::post('/new-item-detail', 'PhoneController@addPhoneDetail');
+
+Route::post('/add-phone-stock', 'PhoneController@addPhoneStock');
+
+Route::post('/update-phone-price', 'PhoneController@updatePhonePrice');

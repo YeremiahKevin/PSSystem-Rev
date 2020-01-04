@@ -64,16 +64,6 @@
         <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
         <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="PSsystem@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="PSsystem: database" type="162271b6:PgImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="ms_phone_detail: table" type="69fad909:PgImplModel$LocalTable" />
-      </path>
     </expand>
     <select />
   </component>
@@ -186,6 +176,7 @@
     <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
+    <property name="jsx.switch.disabled" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -253,6 +244,7 @@
       <workItem from="1578016438793" duration="3198000" />
       <workItem from="1578047628753" duration="200000" />
       <workItem from="1578047956130" duration="7533000" />
+      <workItem from="1578097330357" duration="9124000" />
     </task>
     <servers />
   </component>
@@ -264,14 +256,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="56" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1578048202605" />
-    <state x="444" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1578047963606">
+    <state x="444" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1578097331602">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="444" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1578047963606" />
-    <state x="453" y="128" width="629" height="568" key="find.popup" timestamp="1578052659801">
+    <state x="444" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1578097331602" />
+    <state x="453" y="128" width="631" height="568" key="find.popup" timestamp="1578098309738">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="453" y="128" width="629" height="568" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1578052659801" />
+    <state x="453" y="128" width="631" height="568" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1578098309738" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1578048159080">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

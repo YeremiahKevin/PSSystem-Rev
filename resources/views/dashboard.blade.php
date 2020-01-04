@@ -67,6 +67,20 @@
                             </div>
                         </td>
                     </tr>
+                    <tr>
+                        <td class="text-center">
+                            <i class="fas fa-cubes fa-10x cursor-pointer" onclick="onClickAddPhoneStock()"></i>
+                            <div class="col-md-12">
+                                <span class="font-weight-bold" style="font-size: x-large">Add Phone Stock</span>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <i class="fas fa-tag fa-10x cursor-pointer" onclick="onClickUpdatePrice()"></i>
+                            <div class="col-md-12">
+                                <span class="font-weight-bold" style="font-size: x-large">Update Phone Price</span>
+                            </div>
+                        </td>
+                    </tr>
                 </table>
             </div>
         </div>

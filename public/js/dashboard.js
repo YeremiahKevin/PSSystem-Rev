@@ -8,9 +8,17 @@ function onClickReport() {
 }
 
 function onClickNewItem() {
-    window.location.href = '/new-item'
+    window.location.href = '/new-item';
 }
 
 function onClickNewItemDetail() {
-    window.location.href = '/new-item-detail'
+    window.location.href = '/new-item-detail';
+}
+
+function onClickAddPhoneStock() {
+    window.location.href = '/add-phone-stock';
+}
+
+function onClickUpdatePrice() {
+    window.location.href = '/update-phone-price';
 }

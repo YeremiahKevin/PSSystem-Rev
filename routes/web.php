@@ -40,3 +40,11 @@ Route::get('new-item', function () {
 Route::get('new-item-detail', function () {
     return view('new-item-detail');
 });
+
+Route::get('add-phone-stock', function () {
+    return view('add-phone-stock');
+});
+
+Route::get('update-phone-price', function () {
+    return view('update-phone-price');
+});

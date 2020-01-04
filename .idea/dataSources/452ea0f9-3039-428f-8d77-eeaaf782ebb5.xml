@@ -14,16 +14,16 @@
       <Owner>postgres</Owner>
       <IntrospectionStateNumber>4590</IntrospectionStateNumber>
       <Current>1</Current>
-      <Relations>sequence|table|20995|20997|1
-sequence|table|21003|21005|1
-sequence|table|21023|21025|1
-sequence|table|21384|21386|1
+      <Relations>sequence|table|21469|21471|1
 sequence|table|21395|21397|1
 sequence|table|21419|21421|1
 sequence|table|21427|21429|1
 sequence|table|21440|21442|1
 sequence|table|21456|21458|1
-sequence|table|21469|21471|1
+sequence|table|21384|21386|1
+sequence|table|21003|21005|1
+sequence|table|21023|21025|1
+sequence|table|20995|20997|1
 </Relations>
     </database>
     <database id="4" parent="1" name="postgres">

@@ -90,4 +90,68 @@ class PhoneController extends BaseController
 
         return response($result);
     }
+
+    /**
+     * Add phone stock
+     * @param Request $request
+     * @return ResponseFactory|Response
+     * @throws Exception
+     */
+    public function addPhoneStock(Request $request)
+    {
+        try {
+            $data = $request->only([
+                'phone_detail_id',
+                'stock',
+            ]);
+
+            DB::beginTransaction();
+
+            $msPhoneDetail = MsPhoneDetail::findOrFail($data['phone_detail_id']);
+            $previousStock = $msPhoneDetail->stock;
+            $newStock = $previousStock + (int)$data['stock'];
+            $msPhoneDetail->stock = $newStock;
+            $msPhoneDetail->save();
+
+            $result = 'Success';
+
+            DB::commit();
+        } catch (Exception $exception) {
+            DB::rollBack();
+            throw $exception;
+        }
+
+        return response($result);
+    }
+
+    /**
+     * Update phone price
+     * @param Request $request
+     * @return ResponseFactory|Response
+     * @throws Exception
+     */
+    public function updatePhonePrice(Request $request)
+    {
+        try {
+            $data = $request->only([
+                'phone_detail_id',
+                'price'
+            ]);
+
+            DB::beginTransaction();
+
+            $msPhoneDetail = MsPhoneDetail::findOrFail($data['phone_detail_id']);
+            $msPhoneDetail->price = $data['price'];
+            $msPhoneDetail->save();
+
+            $result = 'Success';
+
+            DB::commit();
+        } catch (Exception $exception) {
+            DB::rollBack();
+            throw $exception;
+        }
+
+        return response($result);
+    }
 }
